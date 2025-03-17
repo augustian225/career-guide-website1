@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Kalajyothi Career Guidance</title>
     <link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Keep the rest of your existing CSS here */
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .modal-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .modal-body p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .close {
+            font-size: 2.5em;
+            font-weight: bold;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #ff5733;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Video Background Section -->
@@ -32,7 +108,15 @@
         <div class="content">
             <h1 class="animated-text">Unlock Your Future</h1>
             <p>Discover your perfect career path with expert guidance.</p>
-            <button class="cta-button">Get Started</button>
+            <button class="cta-button" id="getStartedBtn">Get Started</button>
+
+<script>
+    document.getElementById("getStartedBtn").addEventListener("click", function() {
+        alert("WELCOME TO SRI KALAJYOTHI CHARITABLE TRUST CAREER GUIDANCE WEBSITE");
+        // You can replace the alert with any action you'd like
+    });
+</script>
+
         </div>
     </div>
 
@@ -45,7 +129,7 @@
     <div class="container">
         <h2>Resources & Tools</h2>
         <p class="subtitle">Boost your career with these essential tools.</p>
-        <div class="resource-list">html
+        <div class="resource-list">
             
             <a href="resume-tips.html">📄 Resume Building Tips</a>
 
@@ -57,17 +141,7 @@
     </div>
 </section>
 
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p class="subtitle">Have questions? We're here to help!</p>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
+
 </section>
 <section id="careers" class="careers">
     <h2>Explore Career Paths</h2>
@@ -75,19 +149,22 @@
     <div class="career-categories">
         <div class="career-box">
             <a href="#tech-resources">
-                <img src="images/tech.jpg" alt="Technology">
+        <img src="https://raw.githubusercontent.com/augustian225/career-guide-website1/main/tech.jpg" alt="Technology">
+
                 <h3>Technology</h3>
             </a>
         </div>
         <div class="career-box">
             <a href="#business-resources">
-                <img src="images/business.jpg" alt="Business">
+              <img src="https://raw.githubusercontent.com/augustian225/career-guide-website1/main/business.jpg" alt="Business">
+
                 <h3>Business</h3>
             </a>
         </div>
         <div class="career-box">
             <a href="#health-resources">
-                <img src="images/healthcare.jpg" alt="Healthcare">
+              <img src="https://raw.githubusercontent.com/augustian225/career-guide-website1/main/healthcare.jpg" alt="Healthcare">
+
                 <h3>Healthcare</h3>
             </a>
         </div>
